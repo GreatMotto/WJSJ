@@ -22,4 +22,4 @@
         android:textColor="@android:color/white"
         android:layout_gravity="center"
         android:visibility="gone"/>
-</FrameLayout><!-- From: file:/D:/WJSJ_1117/IMKit/src/main/res/layout/rc_fr_photo.xml --><!-- From: file:/D:/WJSJ_1117/IMKit/build/intermediates/bundles/debug/res/layout/rc_fr_photo.xml -->
+</FrameLayout><!-- From: file:/F:/WJSJ_1117/IMKit/src/main/res/layout/rc_fr_photo.xml --><!-- From: file:/F:/WJSJ_1117/IMKit/build/intermediates/bundles/debug/res/layout/rc_fr_photo.xml -->

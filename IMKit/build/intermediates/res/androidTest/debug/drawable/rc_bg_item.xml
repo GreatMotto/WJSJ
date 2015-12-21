@@ -3,4 +3,4 @@
     <item android:state_focused="true" android:drawable="@color/rc_normal_bg"/>
     <item android:state_pressed="true" android:state_enabled="false" android:drawable="@color/rc_normal_bg" />
     <item android:drawable="@android:color/white"/>
-</selector><!-- From: file:/D:/WJSJ_1117/IMKit/src/main/res/drawable/rc_bg_item.xml --><!-- From: file:/D:/WJSJ_1117/IMKit/build/intermediates/bundles/debug/res/drawable/rc_bg_item.xml -->
+</selector><!-- From: file:/F:/WJSJ_1117/IMKit/src/main/res/drawable/rc_bg_item.xml --><!-- From: file:/F:/WJSJ_1117/IMKit/build/intermediates/bundles/debug/res/drawable/rc_bg_item.xml -->

@@ -118,5 +118,6 @@
     <orderEntry type="library" exported="" name="SocialSDK_sms" level="project" />
     <orderEntry type="library" exported="" name="SocialSDK_instagram" level="project" />
     <orderEntry type="library" exported="" name="SocialSDK_ynote" level="project" />
+    <orderEntry type="library" exported="" name="android-android-19" level="project" />
   </component>
 </module>
