@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="170dp"
+    android:layout_gravity="center"
+    android:background="@mipmap/corner_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/threefold_margin"
+        android:text="@string/hint"
+        android:textColor="@color/tv_color_login"
+        android:textSize="@dimen/max_big_text_size" />
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/double_margin"
+        android:layout_marginRight="@dimen/double_margin"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/double_margin"
+        android:text="@string/register_fankui"
+        android:textColor="@color/tv_color_login"
+        android:textSize="@dimen/normal_text_size" />
+
+    <TextView
+        android:id="@+id/tv_fankui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/threefold_margin"
+        android:text="@string/sure"
+        android:textColor="@color/tv_fankui"
+        android:textSize="@dimen/max_bg_text_size" />
+</LinearLayout>

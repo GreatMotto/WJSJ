@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_recommemd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_post_title"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="2dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/recommend"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_post_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_recommemd"
+                android:lines="2"
+                android:maxEms="20"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/double_margin"
+                android:text="共同的空间啊推萨克简单噶个世界"
+                android:textColor="@color/tv_color_login"
+                android:textSize="@dimen/normal_text_size" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:maxEms="5"
+                    android:layout_marginLeft="@dimen/threefold_margin"
+                    android:layout_marginRight="@dimen/threefold_margin"
+                    android:ellipsize="middle"
+                    android:text="Alice"
+                    android:textColor="@color/tv_color_login"
+                    android:textSize="@dimen/normal_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_toRightOf="@+id/tv_name"
+                    android:background="@drawable/my_orange_kuang"
+                    android:gravity="center"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:text="V6"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/small_text_size"
+                    android:visibility="gone"/>
+
+
+
+                <TextView
+                    android:id="@+id/tv_love"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/double_margin"
+                    android:layout_toRightOf="@+id/tv_level"
+                    android:drawableLeft="@mipmap/dianzan_off"
+                    android:drawablePadding="@dimen/halfmargin"
+                    android:text="2"
+                    android:textColor="@color/gray2"
+                    android:textSize="@dimen/small_text_size" />
+                <TextView
+                    android:id="@+id/tv_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/double_margin"
+                    android:layout_toRightOf="@+id/tv_love"
+                    android:drawableLeft="@mipmap/icon_infos"
+                    android:drawablePadding="@dimen/halfmargin"
+                    android:text="256"
+                    android:textColor="@color/gray2"
+                    android:textSize="@dimen/small_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_post_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_review"
+                    android:text="11小时前"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/small_text_size" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="500"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImage="@mipmap/downfail"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundAsCircle="false"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            android:visibility="gone"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundWithOverlayColor="@android:color/transparent"
+            fresco:roundedCornerRadius="5dp" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/trans"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

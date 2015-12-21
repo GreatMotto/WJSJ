@@ -1,0 +1,158 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context="com.bm.wjsj.Personal.MyOrderHisActivity">
+
+    <include layout="@layout/title_bar"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sevenfold_margin">
+
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginLeft="@dimen/double_margin"
+            android:layout_marginRight="@dimen/double_margin"
+            android:layout_marginTop="@dimen/margin"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/dfk_select"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:paddingBottom="@dimen/margin"
+                android:paddingLeft="@dimen/double_margin"
+                android:paddingRight="@dimen/double_margin"
+                android:paddingTop="@dimen/margin"
+                android:text="待付款"
+                android:textColor="@drawable/orde_color_select"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/dsh_select"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="@dimen/margin"
+                android:paddingLeft="@dimen/double_margin"
+                android:paddingRight="@dimen/double_margin"
+                android:paddingTop="@dimen/margin"
+                android:text="待收货"
+                android:textColor="@drawable/orde_color_select"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/sydd_select"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="@dimen/margin"
+                android:text="所有订单"
+                android:textColor="@drawable/orde_color_select"
+                android:textSize="15sp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@+id/radiogroup"
+            android:layout_alignRight="@+id/radiogroup"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_first"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/iv_first"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_marginRight="@dimen/double_margin"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:src="@mipmap/yuan2" />-->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_second"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/iv_second"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_marginRight="15dp"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:src="@mipmap/yuan" />-->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_third"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/iv_third"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_marginRight="@dimen/double_margin"-->
+                    <!--android:layout_marginTop="6dp"-->
+                    <!--android:src="@mipmap/yuan" />-->
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <!--<ListView-->
+        <!--android:id="@+id/listview"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:cacheColorHint="#00000000"-->
+        <!--android:divider="@null"-->
+        <!--android:listSelector="#00000000"-->
+        <!--android:scrollbars="none"></ListView>-->
+
+    <com.bm.wjsj.View.SwipeListView
+        android:id="@+id/orderHisSwipeView"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp"
+        android:cacheColorHint="#00000000"
+        android:scrollbars="none"
+        android:listSelector="@color/alpha_00"
+
+        >
+
+    </com.bm.wjsj.View.SwipeListView>
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:paddingLeft="@dimen/margin"
+    android:paddingRight="@dimen/margin"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_tiezi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_recommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/theme_color"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/margin"
+                    android:paddingRight="@dimen/margin"
+                    android:text="@string/recommend"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/small_text_size"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_post_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv_recommend"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/double_margin"
+                    android:text="烤肉不错哦烤肉不错哦烤肉不错哦"
+                    android:textColor="@color/tv_color_login"
+                    android:textSize="@dimen/normal_text_size" />
+            </RelativeLayout>
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="500"
+                fresco:failureImage="@mipmap/downfail"
+                fresco:failureImageScaleType="centerInside"
+                fresco:placeholderImageScaleType="focusCrop"
+                fresco:roundAsCircle="false"
+                android:layout_margin="@dimen/margin"
+                fresco:roundBottomLeft="true"
+                fresco:roundBottomRight="true"
+                fresco:roundTopLeft="true"
+                fresco:roundTopRight="true"
+                fresco:roundWithOverlayColor="@android:color/transparent"
+                fresco:roundedCornerRadius="5dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_layout"
+            android:paddingBottom="@dimen/margin"
+            android:paddingRight="@dimen/margin"
+            android:paddingTop="@dimen/margin">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Alice"
+                android:textColor="@color/tv_color_login"
+                android:textSize="@dimen/normal_text_size"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_toRightOf="@+id/tv_name"
+                android:background="@drawable/my_orange_kuang"
+                android:gravity="center"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="V6"
+                android:visibility="gone"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_post_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/double_margin"
+                android:layout_toRightOf="@+id/tv_level"
+                android:text="11小时前"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/icon_infos"
+                android:drawablePadding="@dimen/halfmargin"
+                android:text="256"
+                android:textColor="@color/gray2"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_love"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/double_margin"
+                android:layout_toLeftOf="@+id/tv_review"
+                android:drawableLeft="@mipmap/dianzan_off"
+                android:drawablePadding="@dimen/halfmargin"
+                android:text="2"
+                android:textColor="@color/gray2"
+                android:textSize="@dimen/small_text_size" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

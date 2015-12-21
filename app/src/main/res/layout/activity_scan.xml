@@ -1,0 +1,335 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bac_yue"
+    tools:context="com.bm.wjsj.Date.ScanActivity">
+
+    <!--
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_bar"></include>
+        -->
+
+    <RelativeLayout
+        android:id="@+id/rl_sideBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sevenfold_margin">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin"
+            android:src="@mipmap/sidebar1" />
+
+        <TextView
+            android:id="@+id/tv_sidebar"
+            android:layout_width="@dimen/sevenfold_margin"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/re_top"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/rl_sideBar">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:padding="8dp"
+            android:text="正在搜索当前想约会的人..."
+            android:textColor="@color/brown"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@id/tv"
+            android:padding="8dp"
+            android:src="@mipmap/search" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/re_sousuo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/re_top"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/margin"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/xian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/xian" />
+
+
+        <ImageView
+            android:id="@+id/sousuo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/sousuo" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/person"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@mipmap/icon_logo"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="3dp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pic_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/double_margin"
+            android:visibility="visible"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@mipmap/person"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="3dp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pic_10"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="100dp"
+            android:layout_toLeftOf="@+id/person"
+            android:visibility="visible"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@mipmap/person"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="3dp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pic_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/person"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/double_margin"
+            android:visibility="visible"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@mipmap/person"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="3dp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pic_11"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/tenfold_margin"
+            android:layout_toRightOf="@+id/person"
+            android:visibility="visible"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@mipmap/person"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="3dp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pic_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/person"
+            android:layout_marginLeft="@dimen/fivefold_margin"
+            android:visibility="visible"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@mipmap/person"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="3dp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pic_4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/sixfold_margin"
+            android:layout_toRightOf="@id/person"
+            android:visibility="visible"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@mipmap/person"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="3dp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pic_5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/person"
+            android:layout_marginRight="@dimen/sevenfold_margin"
+            android:layout_marginTop="@dimen/double_margin"
+            android:visibility="visible"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@mipmap/person"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="3dp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pic_6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/person"
+            android:layout_margin="@dimen/margin"
+            android:layout_marginLeft="@dimen/threefold_margin"
+            android:layout_toRightOf="@+id/person"
+            android:visibility="visible"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@mipmap/person"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="3dp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pic_7"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/person"
+            android:layout_toLeftOf="@+id/person"
+            android:layout_toStartOf="@+id/person"
+            android:visibility="visible"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@mipmap/person"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="3dp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pic_8"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/person"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_toLeftOf="@+id/person"
+            android:visibility="visible"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@mipmap/person"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="3dp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pic_9"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/person"
+            android:layout_marginRight="-20dp"
+            android:layout_marginTop="@dimen/fivefold_margin"
+            android:layout_toLeftOf="@+id/person"
+            android:visibility="visible"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@mipmap/person"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="3dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

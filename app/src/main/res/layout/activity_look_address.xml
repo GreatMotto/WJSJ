@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bm.wjsj.Personal.LookAddressActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/title_bar"></include>
+
+        <include layout="@layout/address_details"></include>
+    </LinearLayout>
+
+    <com.andexert.library.RippleView xmlns:ripple="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rv_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/fourfold_margin"
+        ripple:rv_rippleDuration="200"
+        ripple:rv_type="rectangle"
+        ripple:rv_zoomDuration="200">
+
+        <TextView
+            android:id="@+id/tv_dz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/save_bt"
+            android:gravity="center"
+            android:text="设为默认地址"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text_size"
+            android:visibility="visible" />
+    </com.andexert.library.RippleView>
+</RelativeLayout>

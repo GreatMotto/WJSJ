@@ -1,0 +1,213 @@
+<resources>
+    <string name="app_name">陌客</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!--左侧菜单-->
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="mymessage">我的消息</string>
+    <string name="wantdate">想约</string>
+    <string name="nearby_people">附近的人</string>
+    <string name="attention">关注</string>
+    <string name="dynamic">动态</string>
+    <string name="circle">圈子</string>
+    <string name="spice_store">情趣商城</string>
+    <string name="my">我的</string>
+    <string name="title_activity_scan">ScanActivity</string>
+    <string name="de_save">"保存"</string>
+
+    <!--登录-->
+    <string name="logname_edit">请输入您的手机号</string>
+    <string name="input_pass">请输入密码</string>
+    <string name="input_newpass">请输入您的新密码</string>
+    <string name="rememberpass">记住密码</string>
+    <string name="forgetpass">忘记密码？</string>
+    <string name="or">OR</string>
+    <string name="pwd_rule">0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ</string>
+
+    <!--注册-->
+    <string name="reasonforregister">为什么用手机注册？</string>
+    <string name="phonenumber">手机号：</string>
+    <string name="code">验证码：</string>
+    <string name="inputcode">请输入验证码</string>
+    <string name="sendcode">发送验证码</string>
+    <string name="pwd">密码：    </string>
+    <string name="checkpwd">确认密码：</string>
+    <string name="checkpwds">确认密码</string>
+    <string name="text_register">使用陌客，就表示您已同意陌客的</string>
+    <string name="agreement">服务协议及隐私政策</string>
+    <string name="submit">提交</string>
+    <string name="next">下一步</string>
+    <string name="checkpwds_hint">请再次输入密码</string>
+
+    <!--注册的成功-->
+    <string name="register_ok">恭喜您，注册成功\n请完善您的资料</string>
+    <string name="nickname">昵称：</string>
+    <string name="nickname_hint">请输入昵称</string>
+    <string name="sex">性别：</string>
+    <string name="sex_hint">请输入性别</string>
+    <string name="birthday">生日：</string>
+    <string name="birthday_hint">请输入生日</string>
+    <string name="area">地区：</string>
+    <string name="area_hint">请输入所在地</string>
+    <string name="save">保存</string>
+    <string name="camera">拍照</string>
+    <string name="album">从相册选择</string>
+    <string name="cancel">取消</string>
+    <string name="sure">确定</string>
+    <string name="ok">确认</string>
+    <string name="hint">提示</string>
+    <string name="post_s">发帖成功</string>
+    <string name="not_modify">(不可修改)</string>
+    <string name="location">所在地：</string>
+    <string name="sign">个性签名：</string>
+    <string name="sign_hint">不超过24个字</string>
+
+    <!--找回密码-->
+    <string name="findpwd">找回密码</string>
+    <string name="text_findpwd">恭喜您，密码已修改~\n请重新登录</string>
+
+    <!--圈子-->
+    <string name="mycircle">我的圈子</string>
+    <string name="hot_post">热门帖子</string>
+    <string name="join">加入</string>
+    <string name="morecircle">更多圈子</string>
+    <string name="recommend">推荐</string>
+    <string name="circledetail">圈子详情</string>
+    <string name="essence">精华</string>
+    <string name="all">全部</string>
+    <string name="top">置顶</string>
+    <string name="more_tip">没有更多了</string>
+    <string name="load_tip">加载中</string>
+
+    <string name="nocircle">暂未加入任何圈子</string>
+    <!--附近的人 -->
+    <string name="nearby">附近的人</string>
+
+    <!--帖子详情-->
+    <string name="topic">话题</string>
+    <string name="flashback">倒叙查看</string>
+    <string name="hotreview">最热评论</string>
+    <string name="report">举报</string>
+    <string name="send">发送</string>
+    <string name="more_review">更多评论</string>
+    <string name="reply">回复</string>
+    <string name="register_hint">请确认您的性别，确认后无法修改</string>
+
+    <!--评论详情-->
+    <string name="reviewdetail">评论详情</string>
+    <string name="review">评论</string>
+
+    <!--动态-->
+    <string name="hot">热门</string>
+    <string name="t_nearby">附近</string>
+    <string name="dynamicdetail">动态详情</string>
+
+    <!--消息-->
+    <string name="msg">消息</string>
+    <string name="delete">删除</string>
+    <string name="msg_talk">聊天消息</string>
+    <string name="msg_attention">关注消息</string>
+    <string name="msg_ac">活动消息</string>
+    <string name="msg_system">系统消息</string>
+
+    <!--个人中心-->
+    <string name="female">美女</string>
+    <string name="male">帅哥</string>
+    <string name="my_dynamic">我的动态</string>
+    <string name="my_post">我的帖子</string>
+    <string name="my_point">我的积分</string>
+    <string name="my_order">我的订单</string>
+    <string name="my_collect">我的收藏</string>
+    <string name="customer_service">客服电话</string>
+
+    <!--设置-->
+    <string name="modify_p">修改个人资料</string>
+    <string name="myaddr">管理我的收货地址</string>
+    <string name="modify_pwd">修改登录密码</string>
+    <string name="activity_push">活动消息推送</string>
+    <string name="talk_push">聊天消息推送</string>
+    <string name="attention_push">新增关注推送</string>
+    <string name="feedback">反馈意见</string>
+    <string name="aboutus">关于我们</string>
+    <string name="help">帮助中心</string>
+    <string name="tellfriends">告诉朋友</string>
+    <string name="update">版本更新</string>
+    <string name="clear">清除缓存</string>
+    <string name="exit">退出</string>
+    <string name="constellation">星座：</string>
+    <string name="register_fankui">感谢您对陌客提出的反馈建议，我们将以\n客户至上、完美体验为宗旨真诚为您服务</string>
+
+    <!--关注-->
+    <string name="att_each">互相关注</string>
+    <string name="att_my">我的关注</string>
+    <string name="att_to_my">关注我的</string>
+
+    <!--举报-->
+    <string name="toast_title">提示</string>
+    <string name="accusation_content">举报成功，等待管理员审核</string>
+    <string name="title_activity_classifiy_acitivity">ClassifiyAcitivity</string>
+    <string name="title_activity_second_classify">SecondClassifyActivity</string>
+
+    <!--帮助中心-->
+    <string name="commonproblem">新手指南</string>
+    <string name="shangcheng">商城保障</string>
+    <string name="wuliu">支付说明</string>
+    <string name="order">售后服务</string>
+    <string name="dengji">等级说明</string>
+    <string name="qita">其它问题</string>
+
+    <string name="title_activity_shop_deatais">ShopDeataisActivity</string>
+    <string name="title_activity_shop_evaluation">ShopEvaluation</string>
+    <string name="title_activity_my_order">MyOrderActivity</string>
+    <string name="title_activity_privilege">PrivilegeActivity</string>
+    <string name="title_activity_my_addess_acitity">MyAddessAcitity</string>
+    <string name="title_activity_look_address">LookAddressActivity</string>
+    <string name="title_activity_change_address">ChangeAddressActivity</string>
+    <!--商城-->
+    <string name="tttt">套套天堂</string>
+    <string name="qqny">情趣内衣</string>
+    <string name="ysbj">延时保健</string>
+    <string name="nanywj">男用玩具</string>
+    <string name="nvywj">女用玩具</string>
+    <string name="tqzx">调情助兴</string>
+    <string name="shop_deatils">商品详情</string>
+    <string name="buy_num">87人购买</string>
+    <string name="price">￥78.00</string>
+    <string name="shop_pj">商品评价</string>
+    <string name="buy_immediately">立即购买</string>
+    <string name="jion_shopcat">加入购物车</string>
+
+    <string name="pay_success">支付成功~~\n请静候您的宝贝到来</string>
+    <string name="pay_successjf">兑换成功~~\n请静候您的宝贝到来</string>
+    <string name="pay_failurejf">很抱歉~~兑换失败~~\n请重新提交兑换~~</string>
+    <string name="pay_failure">很抱歉~~支付失败~~\n请重新提交兑换~~</string>
+    <string name="goon_shop">继续购物</string>
+    <string name="backtomy">返回个人中心</string>
+    <string name="pay_s">支付成功</string>
+    <string name="pay_f">支付失败</string>
+    <!--分类-->
+    <string name="fenlei">分类</string>
+    <!--地址-->
+    <string name="change">修改</string>
+    <!--订单-->
+    <string name="oder_suer">确认订单</string>
+    <!--假数据-->
+    <string name="longdata">涛涛哈皮几号到家哦 涛涛哈皮几号到家哦山东I啊都I多久啊送点卷哦啊睡觉的 </string>
+    <string name="jia_shop">连体裤袜</string>
+    <string name="title_activity_my_shop_cat">MyShopCatActivity</string>
+    <!--购物车-->
+    <string name="select_all">全选</string>
+    <string name="shop_cat">购物车</string>
+    <string name="cat_num">数量</string>
+    <string name="title_activity_score_shop">ScoreShopActivity</string>
+    <string name="title_activity_my_score_his_adapter">MyScoreHisAdapter</string>
+    <string name="title_activity_my_order_his">MyOrderHisActivity</string>
+    <string name="title_activity_my_evaluate">MyEvaluateActivity</string>
+    <string name="title_activity_my_collection">MyCollectionActivity</string>
+
+    <string name="reply_by_app">陌客回复：</string>
+
+</resources>

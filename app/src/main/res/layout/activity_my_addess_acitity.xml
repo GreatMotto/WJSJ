@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bm.wjsj.Personal.MyAddessAcitity">
+
+    <include layout="@layout/title_bar"></include>
+
+    <com.bm.wjsj.View.SwipeListView
+        android:id="@+id/lv__address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="0dp"
+        android:listSelector="@color/alpha_00">
+
+    </com.bm.wjsj.View.SwipeListView>
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin">
+    <!--android:background="@color/bg_color"-->
+    <LinearLayout
+        android:id="@+id/ll_dongtai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21"
+                android:textColor="@color/black"
+                android:textSize="@dimen/big_text_size" />
+
+            <TextView
+                android:id="@+id/tv_april"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="五月"
+                android:textColor="@color/deafaut_text"
+                android:textSize="@dimen/min_text_size" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/threefold_margin">
+
+            <com.bm.wjsj.View.NoScrollGridView
+                android:id="@+id/gv_tupian"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:horizontalSpacing="@dimen/margin"
+                android:listSelector="@color/alpha_00"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:verticalSpacing="@dimen/margin" />
+            <View
+                android:id="@+id/view_1"
+                android:layout_width="90dp"
+                android:layout_height="95dp"
+                android:layout_above="@+id/tv_content"
+                android:layout_alignParentRight="true"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/view_2"
+                android:layout_width="188dp"
+                android:layout_height="95dp"
+                android:layout_above="@+id/tv_content"
+                android:layout_alignParentRight="true"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gv_tupian"
+                android:text="这么好看的衣服谁帮我买卖"
+                android:textColor="@color/deafaut_text"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_part_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_content"
+                android:layout_marginTop="@dimen/margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_zan_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@mipmap/dianzan_off"
+                    android:drawablePadding="@dimen/halfmargin"
+                    android:text="12"
+                    android:textColor="@color/date_color"
+                    android:textSize="@dimen/small_text_size" />
+                <TextView
+                    android:id="@+id/tv_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_zan_num"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:drawableLeft="@mipmap/icon_infos"
+                    android:drawablePadding="@dimen/halfmargin"
+                    android:text="256"
+                    android:textColor="@color/gray2"
+                    android:textSize="@dimen/small_text_size" />
+                <TextView
+                    android:id="@+id/tv_jubao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="举报"
+                    android:textColor="@color/jubao"
+                    android:textSize="@dimen/big_text_size"
+                    android:visibility="invisible"/>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+
+    <RadioGroup
+        android:id="@+id/rg_accusation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_margin"
+        android:paddingLeft="@dimen/margin"
+        android:background="@mipmap/bg_accustation"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_ljyy"
+            style="@style/menu_tv_style"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableLeft="@drawable/accusation_select"
+            android:drawablePadding="@dimen/margin"
+            android:text="垃圾营销" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/double_margin"
+            android:layout_marginRight="@dimen/double_margin"
+            android:background="#e2e1e4"></View>
+
+        <RadioButton
+            android:id="@+id/rb_yhsq"
+            style="@style/menu_tv_style"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:drawableLeft="@drawable/accusation_select"
+            android:drawablePadding="@dimen/margin"
+            android:text="淫秽色情" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/double_margin"
+            android:layout_marginRight="@dimen/double_margin"
+            android:background="#e2e1e4"></View>
+
+        <RadioButton
+            android:id="@+id/rb_mgxx"
+            style="@style/menu_tv_style"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:drawableLeft="@drawable/accusation_select"
+            android:drawablePadding="@dimen/margin"
+            android:text="敏感信息" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/double_margin"
+            android:layout_marginRight="@dimen/double_margin"
+            android:background="#e2e1e4"></View>
+
+        <RadioButton
+            android:id="@+id/rb_srw"
+            style="@style/menu_tv_style"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:drawableLeft="@drawable/accusation_select"
+            android:drawablePadding="@dimen/margin"
+            android:text="骚扰我" />
+
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edt_yijian"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/double_margin"
+        android:background="@mipmap/shurukuang"
+        android:gravity="start"
+        android:hint="举报理由.."
+        android:padding="@dimen/margin"
+        android:textSize="@dimen/small_text_size" />
+</LinearLayout>

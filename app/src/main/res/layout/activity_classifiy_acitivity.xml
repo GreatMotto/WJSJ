@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bm.wjsj.SpiceStore.ClassifiyAcitivity">
+
+    <include layout="@layout/title_bar"></include>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.5"
+            android:background="@color/white">
+
+            <ListView
+                android:id="@+id/lv_class_name"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:listSelector="@color/alpha_00"
+                android:scrollbars="none"></ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="7.5"
+            android:background="@color/bg_color">
+
+            <GridView
+                android:id="@+id/gv_classcontetn"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_margin="@dimen/margin"
+                android:layout_weight="7.5"
+                android:horizontalSpacing="@dimen/margin"
+                android:listSelector="@color/alpha_00"
+                android:numColumns="2"
+                android:scrollbars="none"
+                android:verticalSpacing="@dimen/margin"></GridView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

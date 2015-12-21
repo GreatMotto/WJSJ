@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white_tr">#eeeeee</color>
+    <color name="alpha_00">#00000000</color>
+    <color name="trans">#50000000</color>
+    <color name="trans_90">#95000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="orange">#f15000</color>
+    <color name="brown">#836a6a</color>
+    <!--背景色-->
+    <color name="bg_color">#f5efef</color>
+    <color name="bg_menu">#fefdfd</color>
+    <color name="tv_color_login">#4a4751</color>
+    <color name="tv_gray">#4c4855</color>
+    <color name="tv_fankui">#007cde</color>
+
+    <!--下拉刷新-->
+    <color name="refresh1">#1571ed</color>
+    <color name="refresh2">#d33f2c</color>
+    <color name="refresh3">#fdb90b</color>
+    <color name="refresh4">#009d55</color>
+
+    <!--登录文字色-->
+    <color name="red">#f55456</color>
+    <!--注册文字色-->
+    <color name="tv_color_register">#4c4855</color>
+    <!--主题文字色-->
+    <color name="theme_color">#fe9293</color>
+    <color name="dl_tt_bg">#ebebec</color>
+    <color name="date_color">#937e7e</color>
+    <color name="deafaut_text">#4c4855</color>
+    <color name="lebon_color">#fe9293</color>
+    <color name="gray">#909090</color>
+    <color name="gray2">#979493</color>
+    <color name="list_itme">#4a4751</color>
+    <color name="filter_text_color">#6b6871</color>
+    <color name="review_bg">#f5f5f7</color>
+    <color name="line_color">#bdbcbd</color>
+    <color name="bg_person">#b4e59fa2</color>
+    <color name="bg_person_1">#e59fa2</color>
+    <color name="white_alphaf">#b4ffffff</color>
+    <color name="white_alpha">#80ffffff</color>
+    <color name="jubao">#976564</color>
+    <color name="my_brown">#793434</color>
+    <color name="classifyname_color">#4c4855</color>
+    <color name="shop_mai">#a4a4a4</color>
+    <!--商城首页字体颜色-->
+    <color name="taotao_font">#fe92cc</color>
+    <color name="neiyi_font">#ff9a44</color>
+    <color name="qingqu_font">#f133b9</color>
+    <color name="nanxing_font">#ffcd5c</color>
+    <color name="nvxing_font">#fe644e</color>
+    <color name="tiaoqing_font">#fe644e</color>
+    <color name="shop_text">#4c4855</color>
+    <color name="num_order">#5d5a65</color>
+    <color name="divide">#e2e1e4</color>
+    <color name="oder_tex">#6d6a74</color>
+    <color name="oder_blue">#0b85e9</color>
+    <color name="oder_pay">#c4c3c6</color>
+    <color name="cat_xian">#f55456</color>
+    <color name="cat_center">#f5efef</color>
+
+
+</resources>

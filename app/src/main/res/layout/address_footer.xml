@@ -1,0 +1,305 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin"
+        android:background="@color/bg_color"></View>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_remark"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/double_margin"
+                android:paddingRight="@dimen/margin"
+                android:paddingTop="@dimen/margin"
+                android:paddingBottom="@dimen/margin"
+                android:text="备注"
+                android:textColor="@color/deafaut_text"
+                />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:background="@color/divide"></View>
+
+            <EditText
+                android:id="@+id/et_remark"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/deat_kuang"
+                android:gravity="start"
+                android:layout_marginLeft="@dimen/margin"
+                android:hint="给卖家留言："
+                android:padding="@dimen/margin"
+                android:textSize="@dimen/small_text_size"
+                android:maxLength="99"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_foot_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/margin"
+            android:background="@color/bg_color"></View>
+
+        <LinearLayout
+            android:id="@+id/ll_fromorder_footer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin">
+
+                <TextView
+                    android:id="@+id/tv_youhui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="用户等级优惠"
+                    android:textColor="@color/oder_tex"
+                    android:textSize="@dimen/small_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_youhuiPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/double_margin"
+                    android:layout_toRightOf="@id/tv_youhui"
+                    android:text="0元"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/small_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_youhui_shuoming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="2dp"
+                    android:text="等级优惠说明"
+                    android:textColor="@color/oder_blue"
+                    android:textSize="@dimen/small_text_size" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/margin"
+                android:background="@color/bg_color"></View>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/rg_pay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/rl_zfb"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin"
+                android:paddingTop="@dimen/margin">
+
+                <TextView
+                    android:id="@+id/tv_zfb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:textColor="@color/oder_pay"
+                    android:text="支付宝" />
+
+                <ImageView
+                    android:id="@+id/rb_zfb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/double_margin"
+                    android:src="@mipmap/pay_check" />
+
+                <TextView
+                    android:id="@+id/tv_zfb_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin"
+                    android:layout_toLeftOf="@id/rb_zfb"
+                    android:text="满68包邮"
+                    android:textColor="@color/oder_pay"></TextView>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:background="@color/divide"></View>
+
+            <RelativeLayout
+                android:id="@+id/rl_wx"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin"
+                android:paddingTop="@dimen/margin">
+
+                <TextView
+                    android:id="@+id/tv_wx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:textColor="@color/oder_pay"
+                    android:text="微信支付" />
+
+                <ImageView
+                    android:id="@+id/rb_wx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/double_margin"
+                    android:src="@mipmap/pay_uncheck" />
+
+                <TextView
+                    android:id="@+id/tv_wx_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin"
+                    android:layout_toLeftOf="@id/rb_wx"
+                    android:text="满68包邮"
+                    android:textColor="@color/oder_pay"></TextView>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:background="@color/divide"></View>
+
+            <RelativeLayout
+                android:id="@+id/rl_yl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin"
+                android:paddingTop="@dimen/margin"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/tv_yl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:text="银联" />
+
+
+                <ImageView
+                    android:id="@+id/rb_yl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/double_margin"
+                    android:src="@mipmap/pay_uncheck" />
+
+                <TextView
+                    android:id="@+id/tv_yl_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin"
+                    android:layout_toLeftOf="@id/rb_yl"
+                    android:text="满68包邮"
+                    android:textColor="@color/oder_pay" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:background="@color/divide"
+                android:visibility="gone"
+                ></View>
+
+            <RelativeLayout
+                android:id="@+id/rl_df"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin"
+                android:paddingTop="@dimen/margin">
+
+                <TextView
+                    android:id="@+id/tv_df"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:textColor="@color/oder_pay"
+                    android:text="货到付款" />
+
+
+                <ImageView
+                    android:id="@+id/rb_df"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/double_margin"
+                    android:src="@mipmap/pay_uncheck" />
+
+                <TextView
+                    android:id="@+id/tv_df_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin"
+                    android:layout_toLeftOf="@id/rb_df"
+                    android:text="满68包邮"
+                    android:textColor="@color/oder_pay" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/margin"
+            android:background="@color/bg_color"></View>
+
+</LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

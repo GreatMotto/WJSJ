@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--<include layout="@layout/lv_item_dynamic" />-->
+    <include layout="@layout/lv_item_dynamic_ht" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:src="@mipmap/xiantiao2" />
+
+    <TextView
+        android:id="@+id/tv_reply_owner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/icon_red_info"
+        android:drawablePadding="@dimen/halfmargin"
+        android:layout_marginLeft="@dimen/twelvefold_margin"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:text="@string/review"
+        android:textColor="@color/tv_color_login"
+        android:textSize="@dimen/normal_text_size" />
+
+</LinearLayout>

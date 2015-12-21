@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:gesture-image="http://schemas.polites.com/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:background="@mipmap/downfail"/>
+
+    <!--<com.facebook.drawee.view.SimpleDraweeView-->
+        <!--android:id="@+id/my_image_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--fresco:actualImageScaleType="focusCrop"-->
+        <!--fresco:fadeDuration="500"-->
+        <!--fresco:failureImage="@mipmap/downfail"-->
+        <!--fresco:failureImageScaleType="centerInside"-->
+        <!--fresco:placeholderImageScaleType="focusCrop"-->
+        <!--fresco:roundAsCircle="false" />-->
+
+
+</RelativeLayout>

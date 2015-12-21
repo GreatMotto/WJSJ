@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context="com.bm.wjsj.Personal.MyScoreHisActivity">
+
+    <include layout="@layout/title_bar"></include>
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_pager"
+        android:layout_margin="@dimen/margin"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/left_radio_tv"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="兑换记录"
+            android:textColor="@drawable/them_tv_textcolor"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/right_radio_tv"
+            android:button="@null"
+            android:gravity="center"
+            android:text="获取记录"
+            android:textColor="@drawable/them_tv_textcolor"
+            android:textSize="15sp" />
+
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/radiogroup"></android.support.v4.view.ViewPager>
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Animationmain/Animationmain.iml" filepath="$PROJECT_DIR$/Animationmain/Animationmain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IMKit/IMKit.iml" filepath="$PROJECT_DIR$/IMKit/IMKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PreLollipopTransitionLib/PreLollipopTransitionLib.iml" filepath="$PROJECT_DIR$/PreLollipopTransitionLib/PreLollipopTransitionLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WJSJ_1117.iml" filepath="$PROJECT_DIR$/WJSJ_1117.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Wheel_main/Wheel_main.iml" filepath="$PROJECT_DIR$/Wheel_main/Wheel_main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gestureimageview/gestureimageview.iml" filepath="$PROJECT_DIR$/gestureimageview/gestureimageview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nubmer/nubmer.iml" filepath="$PROJECT_DIR$/nubmer/nubmer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/social_sdk_library_project/social_sdk_library_project.iml" filepath="$PROJECT_DIR$/social_sdk_library_project/social_sdk_library_project.iml" />
+    </modules>
+  </component>
+</project>

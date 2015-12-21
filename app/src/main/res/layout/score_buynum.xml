@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@mipmap/corner_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="输入购买数量"
+        android:textColor="@color/tv_color_login"
+        android:textSize="@dimen/normal_text_size" />
+
+    <EditText
+        android:id="@+id/et_goodsNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="left|center_vertical"
+        android:hint="请输入购买数量"
+        android:inputType="number"
+        android:maxLength="3"
+        android:padding="@dimen/margin"
+        android:singleLine="true"
+        android:textColor="@color/tv_color_login"
+        android:textSize="@dimen/normal_text_size" />
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/btn_choose_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/margin"
+            android:text="@string/cancel"
+            android:textColor="@color/tv_color_login"
+            android:textSize="@dimen/normal_text_size" />
+
+        <TextView
+            android:id="@+id/tv_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/margin"
+            android:text="@string/ok"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/normal_text_size" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <com.bm.wjsj.View.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:fadingEdgeLength="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:src="@mipmap/xiantiao2" />
+
+
+
+            <!--
+                        <TextView
+                            android:id="@+id/tv_msg_talk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:drawableLeft="@mipmap/i_m_talk"
+                            android:drawablePadding="@dimen/margin"
+                            android:drawableRight="@mipmap/icon_p_more"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="@dimen/double_margin"
+                            android:paddingLeft="@dimen/margin"
+                            android:paddingRight="@dimen/margin"
+                            android:paddingTop="@dimen/double_margin"
+                            android:text="@string/msg_talk"
+                            android:textColor="@color/tv_color_login"
+                            android:textSize="@dimen/normal_text_size" />
+            -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/xiantiao2" />
+
+            <TextView
+                android:id="@+id/tv_msg_attention"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@mipmap/i_m_attention"
+                android:drawablePadding="@dimen/margin"
+                android:drawableRight="@mipmap/icon_p_more"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/double_margin"
+                android:paddingLeft="@dimen/margin"
+                android:paddingRight="@dimen/margin"
+                android:paddingTop="@dimen/double_margin"
+                android:text="@string/msg_attention"
+                android:textColor="@color/tv_color_login"
+                android:textSize="@dimen/normal_text_size" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/xiantiao2" />
+
+            <TextView
+                android:id="@+id/tv_msg_ac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@mipmap/i_m_ac"
+                android:drawablePadding="@dimen/margin"
+                android:drawableRight="@mipmap/icon_p_more"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/double_margin"
+                android:paddingLeft="@dimen/margin"
+                android:paddingRight="@dimen/margin"
+                android:paddingTop="@dimen/double_margin"
+                android:text="@string/msg_ac"
+                android:textColor="@color/tv_color_login"
+                android:textSize="@dimen/normal_text_size" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/xiantiao2" />
+
+            <TextView
+                android:id="@+id/tv_msg_system"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@mipmap/i_m_system"
+                android:drawablePadding="@dimen/margin"
+                android:drawableRight="@mipmap/icon_p_more"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/double_margin"
+                android:paddingLeft="@dimen/margin"
+                android:paddingRight="@dimen/margin"
+                android:paddingTop="@dimen/double_margin"
+                android:text="@string/msg_system"
+                android:textColor="@color/tv_color_login"
+                android:textSize="@dimen/normal_text_size" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/xiantiao2" />
+
+        </LinearLayout>
+
+    </com.bm.wjsj.View.MyScrollView>
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bao="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bm.wjsj.Personal.MyEvaluateActivity">
+
+    <include layout="@layout/title_bar"></include>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_shop_image"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:visibility="visible"
+            />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/margin">
+
+            <TextView
+                android:id="@+id/tv_shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/small_text_size"
+                android:text="@string/longdata" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/margin"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商品评分：" />
+
+                <com.bm.wjsj.View.RatingBarView
+                    android:id="@+id/starView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    bao:starCount="5"
+                    bao:starEmpty="@drawable/start_kong"
+                    bao:starFill="@drawable/start_shi"
+                    bao:starImageSize="50dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/edt_eval"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/eval_input"
+        android:hint="说点什么吧..."
+        android:gravity="start"
+        android:maxLength="140"
+        android:paddingBottom="@dimen/double_margin"
+        android:paddingTop="@dimen/margin"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin"
+        android:textSize="@dimen/small_text_size"
+        android:layout_margin="@dimen/margin"/>
+    <TextView
+        android:id="@+id/tv_eval_num"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginBottom="@dimen/double_margin"
+        android:paddingRight="10dp"
+        android:text="(1/400)"/>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

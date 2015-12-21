@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <com.bm.wjsj.View.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:fadingEdgeLength="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/threefold_margin"
+                android:gravity="center"
+                android:text="@string/register_ok"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/big_text_size" />
+
+            <ImageView
+                android:id="@+id/iv_headpic"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/double_margin"
+                android:src="@mipmap/default_face" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/double_margin"
+                android:background="@mipmap/xiantiao2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/margin"
+                    android:paddingTop="@dimen/margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin"
+                        android:text="@string/nickname"
+                        android:textColor="@color/tv_color_register"
+                        android:textSize="@dimen/normal_text_size" />
+
+
+                    <EditText
+                        android:id="@+id/et_nickname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/nickname_hint"
+                        android:maxLength="10"
+                        android:padding="@dimen/margin"
+                        android:singleLine="true"
+                        android:textColor="@color/tv_color_login"
+                        android:textSize="@dimen/normal_text_size" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginRight="@dimen/margin"
+                    android:background="@mipmap/xiantiao" />
+
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginRight="@dimen/margin"
+                    android:background="@mipmap/xiantiao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/margin"
+                    android:paddingTop="@dimen/margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin"
+                        android:text="@string/birthday"
+                        android:textColor="@color/tv_color_register"
+                        android:textSize="@dimen/normal_text_size" />
+
+
+                    <EditText
+                        android:id="@+id/et_birthday"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:focusable="false"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/birthday_hint"
+                        android:padding="@dimen/margin"
+                        android:singleLine="true"
+                        android:textColor="@color/tv_color_login"
+                        android:textSize="@dimen/normal_text_size" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginRight="@dimen/margin"
+                    android:background="@mipmap/xiantiao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/margin"
+                    android:paddingTop="@dimen/margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin"
+                        android:text="@string/area"
+                        android:textColor="@color/tv_color_register"
+                        android:textSize="@dimen/normal_text_size" />
+
+
+                    <EditText
+                        android:id="@+id/et_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:focusable="false"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/area_hint"
+                        android:padding="@dimen/margin"
+                        android:singleLine="true"
+                        android:textColor="@color/tv_color_login"
+                        android:textSize="@dimen/normal_text_size" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/xiantiao2" />
+
+
+            <com.andexert.library.RippleView xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rv_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/fourfold_margin"
+                android:layout_marginTop="@dimen/fourfold_margin"
+                ripple:rv_rippleDuration="200"
+                ripple:rv_type="rectangle"
+                ripple:rv_zoomDuration="200">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/register_btn_bg"
+                    android:gravity="center"
+                    android:text="@string/save"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/big_text_size" />
+
+            </com.andexert.library.RippleView>
+
+        </LinearLayout>
+    </com.bm.wjsj.View.MyScrollView>
+
+</LinearLayout>

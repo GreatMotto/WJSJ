@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/tittle"
+        layout="@layout/title_bar" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/tittle">
+
+        <ImageView
+            android:id="@+id/iv_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tittle"
+            android:layout_marginLeft="@dimen/threefold_margin"
+            android:layout_marginRight="@dimen/threefold_margin"
+            android:layout_marginTop="45dp"
+            android:background="@mipmap/iv_2" />
+
+
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_1"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/tittle"-->
+            <!--android:layout_marginLeft="@dimen/double_margin"-->
+            <!--android:layout_marginRight="@dimen/double_margin"-->
+            <!--android:layout_marginTop="50dp"-->
+            <!--android:background="@drawable/accusation_select"-->
+            <!--/>-->
+        <TextView
+            android:id="@+id/empty_list_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tittle"
+            android:layout_gravity="center"
+            android:text="没有更多数据了"
+             />
+
+        <com.bm.wjsj.View.MyCardView.SwipeFlingAdapterView
+            android:id="@+id/my_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tittle"
+            android:background="@color/alpha_00"
+            app:rotation_degrees="15.5"
+            tools:context=".MyActivity" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_touming"
+        android:layout_width="50dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tittle"
+        android:background="@color/alpha_00"></TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/double_margin"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp">
+
+
+        <ImageView
+            android:id="@+id/iv_buzan"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="50dp"
+            android:background="@mipmap/buzan_xia" />
+
+        <ImageView
+            android:id="@+id/iv_zan"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:layout_marginRight="50dp"
+            android:background="@mipmap/zansini" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+
+    <RadioGroup
+        android:id="@+id/rg_gender"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin">
+
+        <RadioButton
+            android:id="@+id/rb_nv"
+            style="@style/menu_tv_style"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="女" />
+
+        <RadioButton
+            android:id="@+id/rb_nan"
+            style="@style/menu_tv_style"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="男" />
+
+        <RadioButton
+            android:id="@+id/rb_all"
+            style="@style/menu_tv_style"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="全部" />
+
+    </RadioGroup>
+
+    <View
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="#e2e1e4"></View>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_margin"
+        android:background="@color/white"
+
+        android:orientation="vertical">
+
+        <RelativeLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/alpha_00"
+            android:padding="@dimen/double_margin">
+
+            <TextView
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年龄："
+                android:textColor="@color/tv_color_login"
+                android:textSize="@dimen/normal_text_size" />
+
+            <TextView
+                android:id="@+id/tv_center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/double_margin"
+                android:layout_toRightOf="@id/tv_age"
+                android:text="不限"
+                android:textColor="@color/tv_color_login"
+                android:textSize="@dimen/normal_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/you_arrow" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/double_margin"
+            android:layout_marginRight="@dimen/double_margin"
+            android:background="#e2e1e4"></View>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/alpha_00"
+            android:padding="@dimen/double_margin">
+
+            <TextView
+                android:id="@+id/tv_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地区："
+                android:textColor="@color/tv_color_login"
+                android:textSize="@dimen/normal_text_size" />
+
+            <TextView
+                android:id="@+id/tv_area_center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/double_margin"
+                android:layout_toRightOf="@id/tv_area"
+                android:background="@null"
+                android:focusable="false"
+                android:text="不限"
+                android:textColor="@color/tv_color_login"
+                android:textSize="@dimen/normal_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/you_arrow" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/double_margin"
+            android:layout_marginRight="@dimen/double_margin"
+            android:background="#e2e1e4"></View>
+
+        <RelativeLayout
+            android:id="@+id/rl_online"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/alpha_00"
+            android:padding="@dimen/double_margin">
+
+            <TextView
+                android:id="@+id/tv_online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="出现时间："
+                android:textColor="@color/tv_color_login"
+                android:textSize="@dimen/normal_text_size" />
+
+            <TextView
+                android:id="@+id/tv_online_center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/double_margin"
+                android:layout_toRightOf="@id/tv_online"
+                android:text="7天内"
+                android:textColor="@color/tv_color_login"
+                android:textSize="@dimen/normal_text_size" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
