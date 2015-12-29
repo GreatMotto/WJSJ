@@ -155,10 +155,10 @@ public class WJSJApplication extends Application implements RongIM.LocationProvi
 
     private void initImageLoader() {
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)
-                .threadPriority(Thread.NORM_PRIORITY)
+                .threadPriority(Thread.NORM_PRIORITY-1)
                 .threadPoolSize(3)
                 .denyCacheImageMultipleSizesInMemory()
-                .memoryCache(new WeakMemoryCache())
+                //.memoryCache(new WeakMemoryCache())
                 .memoryCacheSize(4 * 1024 * 1024)
                 .diskCacheSize(10 * 1024 * 1024)// 10 Mb
                 .diskCacheFileNameGenerator(new Md5FileNameGenerator())

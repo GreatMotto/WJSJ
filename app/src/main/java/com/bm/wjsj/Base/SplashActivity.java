@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.Window;
 import android.widget.ImageView;
 
@@ -60,7 +61,7 @@ public class SplashActivity extends Activity implements APICallback.OnResposeLis
 
     private void init() {
         if (WJSJApplication.getInstance().getSp().getBooleanValue(Constant.SP_KEY_ISLOGIN)) {
-            WebServiceAPI.getInstance().getattentionlist("0", 1, 10, SplashActivity.this, this);
+            //WebServiceAPI.getInstance().getattentionlist("0", 1, 10, SplashActivity.this, this);
         }
 //        final BitmapFactory.Options newOpts = new BitmapFactory.Options();
 //        newOpts.inSampleSize = 2;// 设置缩放比例
@@ -169,7 +170,7 @@ public class SplashActivity extends Activity implements APICallback.OnResposeLis
 
     @Override
     public void OnFailureData(String error, Integer tag) {
-
+        Log.e("SplashFailureData:", "**************************************************error:" + error + ",tag:" + tag);
     }
 
     @Override
@@ -185,6 +186,6 @@ public class SplashActivity extends Activity implements APICallback.OnResposeLis
 
     @Override
     public void OnErrorData(String code, Integer tag) {
-
+        Log.e("SplashErrorData:", "**************************************************error:" + code + ",tag:" + tag);
     }
 }

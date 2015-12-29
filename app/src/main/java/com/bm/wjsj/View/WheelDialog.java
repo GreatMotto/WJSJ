@@ -242,10 +242,6 @@ public class WheelDialog {
                 R.id.tv_sure);
         TextView tv_cancel = (TextView) alertDialog.getWindow().findViewById(
                 R.id.tv_cancel);
-//        lists.add("不限");
-//        lists.add("18-22岁");
-//        lists.add("23-27岁");
-//        lists.add("27-35岁");
         lists.addAll(list);
 
         ages = list.get(0);
@@ -327,51 +323,6 @@ public class WheelDialog {
 
     }
 
-    /*
-    // 解析assets文件
-    private String getFromAssets(Context context, String fileName) {
-        String result = "";
-        try {
-            InputStream in = context.getResources().getAssets().open(fileName);
-            // 获取文件的字节数
-            int lenght = in.available();
-            // 创建byte数组
-            byte[] buffer = new byte[lenght];
-            // 将文件中的数据读到byte数组中
-            in.read(buffer);
-
-            result = EncodingUtils.getString(buffer, ENCODING);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return result;
-    }
-
-    public String getCityNameById(Context context, String provinceId, String cityId) {
-        testJson(context);
-        String names = "";
-        for (ProvinceBean provinceBean : list) {
-            if (provinceBean.id.equals(provinceId)) {
-                names = provinceBean.name;
-                for (CityBean cityBean : provinceBean.children) {
-                    if (cityBean.id.equals(cityId)) {
-                        return names.equals(cityBean.name) ? names : (names + " " + cityBean.name);
-                    }
-                }
-            }
-        }
-        return names;
-    }
-
-    // 解析JSON，获取城市列表
-    private void testJson(Context context) {
-        list.clear();
-        String jsonData_city = getFromAssets(context, "city.json");
-        Gson gson = new Gson();
-        list = gson.fromJson(jsonData_city, new TypeToken<List<ProvinceBean>>() {
-        }.getType());
-    }
-*/
     private class AgeAdapetr extends AbstractWheelTextAdapter {
         List<String> lists;
 

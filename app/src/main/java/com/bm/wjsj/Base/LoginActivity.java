@@ -266,6 +266,8 @@ public class LoginActivity extends BaseActivity implements APICallback.OnRespose
                         Intent intent=new Intent();
                         intent.setAction("cn.jpush.android.unread");
                         this.sendBroadcast(intent);
+
+                        WebServiceAPI.getInstance().getattentionlist("0", 1, 10, mainActivity, mainActivity);
                     }
                     if (!isGoDate) {
 //                    Intent intent = new Intent(LoginActivity.this, ScanActivity.class);

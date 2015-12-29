@@ -274,7 +274,7 @@ public class UploadActivity extends BaseActivity implements APICallback.OnRespos
         alertDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialog) {
-                UploadActivity.this.onBackPressed();
+                finish();
             }
         });
     }
@@ -477,6 +477,7 @@ public class UploadActivity extends BaseActivity implements APICallback.OnRespos
     @Override
     public void OnSuccessData(APIResponse apiResponse, Integer tag) {
         if (apiResponse.status.equals("0")) {
+            Bimp.bmp.clear();
             switch (tag) {
                 case 1:
                     showSuccess();

@@ -1,6 +1,4 @@
 package com.bm.wjsj.Utils;
-
-
 import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,8 +6,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.bm.wjsj.R;
-
-
 /**
  * 
  * @Description loading
@@ -22,8 +18,6 @@ public class DialogUtils {
     public static View view;
 
     /**
-     * 
-     * @deprecated
      * @param message
      * @param context
      */
@@ -40,7 +34,6 @@ public class DialogUtils {
 
     /**
      * 
-     * @deprecated
      */
     public static void cancleProgressDialog() {
         if (mProgressDialog != null)

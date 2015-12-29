@@ -150,6 +150,88 @@ public class AutomaticViewPager extends ViewPager {
         }
     }
 
+    /**
+     * 开始广告滚动
+     *
+     * @param mainActivity     显示广告的主界面
+     * @param scrollTime       滚动间隔 ,0为不滚动
+     * @param ovalLayout       圆点容器,可为空,LinearLayout类型
+     * @param ovalLayoutId     ovalLayout为空时 写0, 圆点layout XMl
+     * @param ovalLayoutItemId ovalLayout为空时 写0,圆点layout XMl 圆点XMl下View ID
+     * @param focusedId        ovalLayout为空时 写0, 圆点layout XMl 选中时的动画
+     * @param normalId         ovalLayout为空时 写0, 圆点layout XMl 正常时背景
+     */
+    public void start(Activity mainActivity, int scrollTime, LinearLayout ovalLayout,
+                      int ovalLayoutId, int ovalLayoutItemId, int focusedId, int normalId,
+                      List<ImageBean> list, float radio,final RefreshLayout rfl) {
+
+        // if (list == null) {
+        mActivity = mainActivity;
+        // mListViews = imgList;
+        mScrollTime = scrollTime;
+        this.list = list;
+        this.radio = radio;
+
+        if (list.size() != 0) {
+            if("0".equals(clickFlag))
+            {
+                //new DownloadImageTask().execute(list.get(position % list.size()).path);
+            }
+        }
+
+        // 设置圆点
+        setOvalLayout(ovalLayout, ovalLayoutId, ovalLayoutItemId, focusedId, normalId);
+        this.setAdapter(adapter);// 设置适配器
+        //设置ViewPager的默认项, 设置为总数的1000倍，实现可以往右滑动的假象
+        int count = (this.list != null && this.list.size() > 1) ? this.list.size() : 0;
+        if (count > 1) {
+            this.setCurrentItem(count * 1000);
+        }
+
+        if (scrollTime != 0 && list.size() > 1) {
+            // 设置滑动动画时间 ,如果用默认动画时间可不用 ,反射技术实现
+            new FixedSpeedScroller(mActivity).setDuration(this, 1000);
+
+            startTimer();
+            // 触摸时停止滚动
+            this.setOnTouchListener(new OnTouchListener() {
+
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    switch (event.getAction()) {
+                        case MotionEvent.ACTION_CANCEL:
+                            rfl.setEnabled(true);
+                            startTimer();
+                            break;
+                        case MotionEvent.ACTION_UP:
+                            startTimer();
+                            break;
+                        case MotionEvent.ACTION_MOVE:
+                            rfl.setEnabled(false);
+                            stopTimer();
+                            if (downP.x == curP.x && downP.y == curP.y) {
+                                return false;
+                            }
+                            break;
+                    }
+//                    if (event.getAction() == MotionEvent.ACTION_UP) {
+//                        startTimer();
+//                    } else {
+//                        stopTimer();
+//                        ((ViewGroup) v).requestDisallowInterceptTouchEvent(false);
+//                        if (downP.x == curP.x && downP.y == curP.y) {
+//                            return false;
+//                        }
+//                    }
+                    return false;
+                }
+            });
+        }
+        if (list.size() > 1) {
+            //this.setCurrentItem(0);// 设置选中为中间/图片为和第0张一样
+        }
+    }
+
     public void setClickFlag(String clickFlag) {
         this.clickFlag = clickFlag;
     }
@@ -326,6 +408,7 @@ public class AutomaticViewPager extends ViewPager {
 
             DisplayImageOptions options = new DisplayImageOptions.Builder()
                     .cacheInMemory(true)
+                    .cacheOnDisk(true)
                             .bitmapConfig(Bitmap.Config.RGB_565)
                     //.bitmapConfig(Bitmap.Config.ARGB_8888)
                     .build();

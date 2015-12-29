@@ -32,7 +32,7 @@ import com.umeng.socialize.weixin.media.WeiXinShareContent;
 
 public class CommentUtils {
 
-    public static UMSocialService mController;
+    public static UMSocialService mController =UMServiceFactory.getUMSocialService("com.umeng.share", RequestType.SOCIAL);;
 
     public static String DOWNLOAD = "";
 

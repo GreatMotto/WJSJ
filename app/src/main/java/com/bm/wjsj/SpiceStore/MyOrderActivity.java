@@ -35,16 +35,15 @@ import com.bm.wjsj.Personal.MyAddessAcitity;
 import com.bm.wjsj.Personal.MyEvaluateActivity;
 import com.bm.wjsj.Personal.MyOrdeHisItemAdapter;
 import com.bm.wjsj.Personal.MyOrderDetailAdapter;
-import com.bm.wjsj.Personal.MyOrderHisActivity;
 import com.bm.wjsj.R;
 import com.bm.wjsj.Utils.AddressUtil;
 import com.bm.wjsj.Utils.DialogUtils;
 import com.bm.wjsj.Utils.NewToast;
 import com.bm.wjsj.Utils.SharedPreferencesHelper;
-import com.bm.wjsj.Utils.ToastDialogUtils;
 import com.bm.wjsj.View.NoScrollListview;
 import com.bm.wjsj.WJSJApplication;
 import com.google.gson.Gson;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -53,7 +52,7 @@ import java.util.Map;
 
 
 /**
- * 支付界面
+ * 确认订单
  */
 public class MyOrderActivity extends HideSoftInputActivity implements APICallback.OnResposeListener{
 
@@ -923,7 +922,7 @@ public class MyOrderActivity extends HideSoftInputActivity implements APICallbac
                                 NewToast.show(this, "积分不足！", Toast.LENGTH_LONG);
                             } else {
                                 WebServiceAPI.getInstance().scoreAddscoreproorder(consignee, mobile,
-                                        address, flagId, allScore + "", ""+scoreNum,MyOrderActivity.this, MyOrderActivity.this);
+                                        address, flagId, scoreproinfo.score, ""+scoreNum,MyOrderActivity.this, MyOrderActivity.this);
                             }
                         }
                     }

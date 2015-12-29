@@ -200,7 +200,7 @@ public class ReviewDetailActivity extends BaseActivity implements APICallback.On
             et_review.setHint("回复" + s + ": ");
             InputMethodManager inputMethodManager = (InputMethodManager) et_review.getContext().getSystemService(INPUT_METHOD_SERVICE);
             inputMethodManager.showSoftInput(et_review, 0);
-            //touserid = id;
+            touserid = id;
 //            if (touserid.equals(WJSJApplication.getInstance().getSp().getValue(Constant.SP_USERID))) {
 //                ShowDeleteReportDlg("提示", "是否删除这条评论", false);
 //            } else {

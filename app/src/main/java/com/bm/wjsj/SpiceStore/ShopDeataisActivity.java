@@ -1,6 +1,8 @@
 package com.bm.wjsj.SpiceStore;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -40,6 +42,7 @@ import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.umeng.socialize.sso.UMSsoHandler;
 
 import java.io.Serializable;
+import java.lang.reflect.Method;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -87,7 +90,12 @@ public class ShopDeataisActivity extends BaseActivity implements APICallback.OnR
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shop_deatais);
+        if(!checkDeviceHasNavigationBar(this))
+        {
+            setContentView(R.layout.activity_shop_deatais);
+        }else {
+            setContentView(R.layout.activity_shop_deatais_nav);
+        }
         tag = getIntent().getIntExtra(Constant.SCORE, 0);
         flagId = getIntent().getStringExtra(Constant.ID);
         spec = getIntent().getStringExtra(Constant.SPEC);
@@ -181,6 +189,39 @@ public class ShopDeataisActivity extends BaseActivity implements APICallback.OnR
                 break;
         }
     }
+
+    private  boolean checkDeviceHasNavigationBar(Context context) {
+        boolean hasNavigationBar = false;
+        Resources rs = context.getResources();
+        int id = rs.getIdentifier("config_showNavigationBar", "bool", "android");
+        if (id > 0) {
+            hasNavigationBar = rs.getBoolean(id);
+        }
+        try {
+            Class systemPropertiesClass = Class.forName("android.os.SystemProperties");
+            Method m = systemPropertiesClass.getMethod("get", String.class);
+            String navBarOverride = (String) m.invoke(systemPropertiesClass, "qemu.hw.mainkeys");
+            if ("1".equals(navBarOverride)) {
+                hasNavigationBar = false;
+            } else if ("0".equals(navBarOverride)) {
+                hasNavigationBar = true;
+            }
+        } catch (Exception e) {
+            Log.e("showNavigationBarError:","----------------------------------------------------------------");
+        }
+        return hasNavigationBar;
+    }
+
+    private int getNavigationBarHeight(Context context) {
+        int navigationBarHeight = 0;
+        Resources rs = context.getResources();
+        int id = rs.getIdentifier("navigation_bar_height", "dimen", "android");
+        if (id > 0 && checkDeviceHasNavigationBar(context)) {
+            navigationBarHeight = rs.getDimensionPixelSize(id);
+        }
+        return navigationBarHeight;
+    }
+
 
     @Override
     public void onClick(View v) {
@@ -602,6 +643,7 @@ public class ShopDeataisActivity extends BaseActivity implements APICallback.OnR
     @Override
     public void OnFailureData(String error, Integer tag) {
         DialogUtils.cancleProgressDialog();
+        Log.e("shopDetailFailureData:", "**************************************************error:" + error + ",tag:" + tag);
         NewToast.show(this, "网络错误！", Toast.LENGTH_LONG);
     }
 
@@ -838,6 +880,7 @@ public class ShopDeataisActivity extends BaseActivity implements APICallback.OnR
 
     @Override
     public void OnErrorData(String code, Integer tag) {
+        Log.e("shopDetailErrorData:","**************************************************error:"+code+",tag:"+tag);
         if (alertDialog != null && alertDialog.isShowing())
             alertDialog.cancel();
     }

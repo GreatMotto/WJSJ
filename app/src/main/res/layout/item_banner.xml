@@ -16,12 +16,12 @@
         android:src="@mipmap/downfail"/>
 
     <!--<com.facebook.drawee.view.SimpleDraweeView-->
-    <!--android:id="@+id/my_image_view"-->
+    <!--android:id="@+id/iv_image"-->
     <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--fresco:actualImageScaleType="focusCrop"-->
-    <!--fresco:fadeDuration="500"-->
-    <!--fresco:placeholderImageScaleType="fitCenter"-->
-    <!--fresco:roundAsCircle="false" />-->
+    <!--android:layout_height="match_parent"-->
+    <!--fresco:fadeDuration="300"-->
+        <!--fresco:failureImage="@mipmap/downfail"-->
+        <!--fresco:placeholderImage="@mipmap/downfail"-->
+      <!--/>-->
 
 </LinearLayout>

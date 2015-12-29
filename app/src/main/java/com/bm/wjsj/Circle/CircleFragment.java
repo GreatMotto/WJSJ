@@ -325,7 +325,7 @@ public class CircleFragment extends Fragment implements View.OnClickListener, AP
                     view_pager.setClickFlag("2");
                     view_pager.start(getActivity(), 4000, dotLayout, R.layout.ad_bottom_item, R.id.ad_item_v,
                             R.mipmap.shop_dian_select, R.mipmap.shop_dian_unselcet, ((MainActivity) getActivity()).
-                                    getImageBean(imagelist, imagelist.size()), 1.15f);
+                                    getImageBean(imagelist, imagelist.size()), 1.15f,rfl_circle);
                     break;
                 default:
                     break;

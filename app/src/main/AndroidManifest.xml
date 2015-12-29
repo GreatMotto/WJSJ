@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.bm.wjsj"
-    android:versionCode="1"
-    android:versionName="1.0">
+    android:versionCode="100"
+    android:versionName="1.0"
+    >
     <!-- Required 自定义用来收发消息的相关权限 -->
     <permission
         android:name="${applicationId}.permission.JPUSH_MESSAGE"

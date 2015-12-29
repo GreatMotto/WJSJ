@@ -196,12 +196,22 @@
                     card_view:cardCornerRadius="1dp"
                     card_view:cardElevation="4dp">
 
-                        <ImageView
-                            android:id="@+id/iv_classfiy_1"
-                            android:layout_width="match_parent"
-                            android:layout_height="150dp"
-                            android:scaleType="centerCrop"
-                            android:src="@mipmap/downfail" />
+                        <!--<ImageView-->
+                            <!--android:id="@+id/iv_classfiy_1"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="150dp"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--android:src="@mipmap/downfail" />-->
+                    <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_classfiy_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:fadeDuration="300"
+                        fresco:failureImage="@mipmap/downfail"
+                        fresco:placeholderImage="@mipmap/downfail"
+                    fresco:placeholderImageScaleType="fitCenter"
+                    fresco:roundAsCircle="false" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -211,13 +221,22 @@
                     card_view:cardCornerRadius="1dp"
                     card_view:cardElevation="4dp">
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_classfiy_2"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="150dp"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@mipmap/downfail" />-->
+                    <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/iv_classfiy_2"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/downfail" />
-
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:fadeDuration="300"
+                        fresco:failureImage="@mipmap/downfail"
+                        fresco:placeholderImage="@mipmap/downfail"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="false" />
                 </android.support.v7.widget.CardView>
             </LinearLayout>
 
@@ -232,13 +251,22 @@
                     card_view:cardCornerRadius="1dp"
                     card_view:cardElevation="4dp">
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_classfiy_3"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="120dp"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@mipmap/downfail" />-->
+                    <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/iv_classfiy_3"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/downfail" />
-
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:fadeDuration="300"
+                        fresco:failureImage="@mipmap/downfail"
+                        fresco:placeholderImage="@mipmap/downfail"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="false" />
                 </android.support.v7.widget.CardView>
             </LinearLayout>
 
@@ -254,13 +282,22 @@
                     card_view:cardCornerRadius="1dp"
                     card_view:cardElevation="4dp">
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:id="@+id/shop_1"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="120dp"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@mipmap/downfail" />-->
+                    <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/shop_1"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/downfail" />
-
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:fadeDuration="300"
+                        fresco:failureImage="@mipmap/downfail"
+                        fresco:placeholderImage="@mipmap/downfail"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="false" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -270,13 +307,22 @@
                     card_view:cardCornerRadius="1dp"
                     card_view:cardElevation="4dp">
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:id="@+id/shop_2"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="120dp"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@mipmap/downfail" />-->
+                    <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/shop_2"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/downfail" />
-
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:fadeDuration="300"
+                        fresco:failureImage="@mipmap/downfail"
+                        fresco:placeholderImage="@mipmap/downfail"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="false" />
                 </android.support.v7.widget.CardView>
             </LinearLayout>
 
@@ -292,12 +338,23 @@
                     card_view:cardCornerRadius="1dp"
                     card_view:cardElevation="4dp">
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:id="@+id/shop_3"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="120dp"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@mipmap/downfail" />-->
+
+                    <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/shop_3"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/downfail" />
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:fadeDuration="300"
+                        fresco:failureImage="@mipmap/downfail"
+                        fresco:placeholderImage="@mipmap/downfail"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="false" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -307,12 +364,23 @@
                     card_view:cardCornerRadius="1dp"
                     card_view:cardElevation="4dp">
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:id="@+id/shop_4"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="120dp"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@mipmap/downfail" />-->
+
+                    <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/shop_4"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/downfail" />
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:fadeDuration="300"
+                        fresco:failureImage="@mipmap/downfail"
+                        fresco:placeholderImage="@mipmap/downfail"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="false" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -322,12 +390,23 @@
                     card_view:cardCornerRadius="1dp"
                     card_view:cardElevation="4dp">
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:id="@+id/shop_5"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="120dp"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@mipmap/downfail" />-->
+
+                    <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/shop_5"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/downfail" />
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:fadeDuration="300"
+                        fresco:failureImage="@mipmap/downfail"
+                        fresco:placeholderImage="@mipmap/downfail"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="false" />
                 </android.support.v7.widget.CardView>
             </LinearLayout>
 
@@ -342,13 +421,23 @@
                     card_view:cardCornerRadius="1dp"
                     card_view:cardElevation="4dp">
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:id="@+id/shop_6"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="120dp"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@mipmap/downfail" />-->
+
+                    <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/shop_6"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/downfail" />
-
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:fadeDuration="300"
+                        fresco:failureImage="@mipmap/downfail"
+                        fresco:placeholderImage="@mipmap/downfail"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="false" />
                 </android.support.v7.widget.CardView>
             </LinearLayout>
 
@@ -364,13 +453,23 @@
                     card_view:cardCornerRadius="1dp"
                     card_view:cardElevation="4dp">
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:id="@+id/shop_7"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="120dp"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@mipmap/downfail" />-->
+
+                    <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/shop_7"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/downfail" />
-
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:fadeDuration="300"
+                        fresco:failureImage="@mipmap/downfail"
+                        fresco:placeholderImage="@mipmap/downfail"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="false" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -380,12 +479,23 @@
                     card_view:cardCornerRadius="1dp"
                     card_view:cardElevation="4dp">
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:id="@+id/shop_8"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="120dp"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@mipmap/downfail" />-->
+
+                    <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/shop_8"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/downfail" />
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:fadeDuration="300"
+                        fresco:failureImage="@mipmap/downfail"
+                        fresco:placeholderImage="@mipmap/downfail"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="false" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -395,13 +505,23 @@
                     card_view:cardCornerRadius="1dp"
                     card_view:cardElevation="4dp">
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:id="@+id/shop_9"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="120dp"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@mipmap/downfail" />-->
+
+                    <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/shop_9"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/downfail" />
-
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:fadeDuration="300"
+                        fresco:failureImage="@mipmap/downfail"
+                        fresco:placeholderImage="@mipmap/downfail"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="false" />
                 </android.support.v7.widget.CardView>
             </LinearLayout>
 
@@ -417,12 +537,23 @@
                     card_view:cardCornerRadius="1dp"
                     card_view:cardElevation="4dp">
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:id="@+id/shop_10"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="110dp"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@mipmap/downfail" />-->
+
+                    <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/shop_10"
                         android:layout_width="match_parent"
                         android:layout_height="110dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/downfail" />
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:fadeDuration="300"
+                        fresco:failureImage="@mipmap/downfail"
+                        fresco:placeholderImage="@mipmap/downfail"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="false" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -433,12 +564,23 @@
                     card_view:cardCornerRadius="0dp"
                     card_view:cardElevation="4dp">
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:id="@+id/shop_11"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="110dp"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@mipmap/downfail" />-->
+
+                    <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/shop_11"
                         android:layout_width="match_parent"
                         android:layout_height="110dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/downfail" />
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:fadeDuration="300"
+                        fresco:failureImage="@mipmap/downfail"
+                        fresco:placeholderImage="@mipmap/downfail"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="false" />
                 </android.support.v7.widget.CardView>
             </LinearLayout>
         </LinearLayout>

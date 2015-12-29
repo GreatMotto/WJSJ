@@ -196,9 +196,14 @@ public class CircleDetailActivity extends BaseActivity implements APICallback.On
                 //发帖
                 case R.id.tv_title_right:
                     if(checkUserAuthority()) {
-                        Intent intent = new Intent(this, UploadActivity.class);
-                        intent.putExtra(Constant.BOOLEAN, false);
-                        startActivity(intent);
+                        if(isMine) {
+                            Intent intent = new Intent(this, UploadActivity.class);
+                            intent.putExtra(Constant.BOOLEAN, false);
+                            startActivity(intent);
+                        }
+                        else{
+                            Toast.makeText(this,"请先加入圈子",Toast.LENGTH_SHORT).show();
+                        }
                     }
                     break;
                 //加入|退出

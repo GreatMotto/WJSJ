@@ -24,11 +24,13 @@ import com.bm.wjsj.Bean.ImageBean;
 import com.bm.wjsj.Constans.Constant;
 import com.bm.wjsj.Http.APICallback;
 import com.bm.wjsj.Http.APIResponse;
+import com.bm.wjsj.Http.Urls;
 import com.bm.wjsj.Http.WebServiceAPI;
 import com.bm.wjsj.MainActivity;
 import com.bm.wjsj.R;
 import com.bm.wjsj.Utils.DisplayUtil;
 import com.bm.wjsj.View.AutomaticViewPager;
+import com.bm.wjsj.WJSJApplication;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -408,8 +410,14 @@ public class SpiceStoreFragment extends Fragment implements View.OnClickListener
                 }
                 break;
             case R.id.go_shopcat:
-                intent.setClass(ac, MyShopCatActivity.class);
-                startActivity(intent);
+                if (!WJSJApplication.getInstance().getSp().getBooleanValue(Constant.SP_KEY_ISLOGIN)) {
+                    ac.gotoLoginAc(ac, 333);
+                } else {
+                    Intent intentCar = new Intent(ac, MyShopCatActivity.class);
+                    startActivity(intentCar);
+                }
+//                intent.setClass(ac, MyShopCatActivity.class);
+//                startActivity(intent);
                 break;
 
 
@@ -440,12 +448,14 @@ public class SpiceStoreFragment extends Fragment implements View.OnClickListener
                     .cacheInMemory(true)
                     .bitmapConfig(Bitmap.Config.RGB_565)
                     .build();
-            ImageLoader.getInstance().displayImage(list_my.get(0).path, iv_classfiy_1, options);
-            ImageLoader.getInstance().displayImage(list_my.get(1).path, iv_classfiy_2, options);
-            ImageLoader.getInstance().displayImage(list_my.get(2).path, iv_classfiy_3, options);
-//            iv_classfiy_1.setImageURI(Uri.parse(list_my.get(0).path));
-//            iv_classfiy_2.setImageURI(Uri.parse(list_my.get(1).path));
-//            iv_classfiy_3.setImageURI(Uri.parse(list_my.get(2).path));
+//            ImageLoader.getInstance().displayImage(list_my.get(0).path, iv_classfiy_1, options);
+//            ImageLoader.getInstance().displayImage(list_my.get(1).path, iv_classfiy_2, options);
+//            ImageLoader.getInstance().displayImage(list_my.get(2).path, iv_classfiy_3, options);
+
+            iv_classfiy_1.setImageURI(Uri.parse( list_my.get(0).path));
+            iv_classfiy_2.setImageURI(Uri.parse( list_my.get(1).path));
+            iv_classfiy_3.setImageURI(Uri.parse(list_my.get(2).path));
+
 
             iv_classfiy_1.setTag(Uri.parse(list_my.get(0).id));
             iv_classfiy_2.setTag(Uri.parse(list_my.get(1).id));
@@ -456,47 +466,58 @@ public class SpiceStoreFragment extends Fragment implements View.OnClickListener
             for (int i = 0; i < list.size(); i++) {
                 switch (i) {
                     case 0:
-                        ImageLoader.getInstance().displayImage(list.get(0).path, shop_1, options);
+                        //ImageLoader.getInstance().displayImage(list.get(0).path, shop_1, options);
+                        shop_1.setImageURI(Uri.parse( list.get(0).path));
                         shop_1.setTag(list.get(0).id);
                         break;
                     case 1:
-                        ImageLoader.getInstance().displayImage(list.get(1).path, shop_2, options);
+                        //ImageLoader.getInstance().displayImage(list.get(1).path, shop_2, options);
+                        shop_2.setImageURI(Uri.parse( list.get(1).path));
                         shop_2.setTag(list.get(1).id);
                         break;
                     case 2:
-                        ImageLoader.getInstance().displayImage(list.get(2).path, shop_3, options);
+                        //ImageLoader.getInstance().displayImage(list.get(2).path, shop_3, options);
+                        shop_3.setImageURI(Uri.parse(list.get(2).path));
                         shop_3.setTag(list.get(2).id);
                         break;
                     case 3:
-                        ImageLoader.getInstance().displayImage(list.get(3).path, shop_4, options);
+                        //ImageLoader.getInstance().displayImage(list.get(3).path, shop_4, options);
+                        shop_4.setImageURI(Uri.parse( list.get(3).path));
                         shop_4.setTag(list.get(3).id);
                         break;
                     case 4:
-                        ImageLoader.getInstance().displayImage(list.get(4).path, shop_5, options);
+                        //ImageLoader.getInstance().displayImage(list.get(4).path, shop_5, options);
+                        shop_5.setImageURI(Uri.parse(list.get(4).path));
                         shop_5.setTag(list.get(4).id);
                         break;
                     case 5:
-                        ImageLoader.getInstance().displayImage(list.get(5).path, shop_6, options);
+                        //ImageLoader.getInstance().displayImage(list.get(5).path, shop_6, options);
+                        shop_6.setImageURI(Uri.parse( list.get(5).path));
                         shop_6.setTag(list.get(5).id);
                         break;
                     case 6:
-                        ImageLoader.getInstance().displayImage(list.get(6).path, shop_7, options);
+                        //ImageLoader.getInstance().displayImage(list.get(6).path, shop_7, options);
+                        shop_7.setImageURI(Uri.parse(list.get(6).path));
                         shop_7.setTag(list.get(6).id);
                         break;
                     case 7:
-                        ImageLoader.getInstance().displayImage(list.get(7).path, shop_8, options);
+                        //ImageLoader.getInstance().displayImage(list.get(7).path, shop_8, options);
+                        shop_8.setImageURI(Uri.parse( list.get(7).path));
                         shop_8.setTag(list.get(7).id);
                         break;
                     case 8:
-                        ImageLoader.getInstance().displayImage(list.get(8).path, shop_9, options);
+                        //ImageLoader.getInstance().displayImage(list.get(8).path, shop_9, options);
+                        shop_9.setImageURI(Uri.parse( list.get(8).path));
                         shop_9.setTag(list.get(8).id);
                         break;
                     case 9:
-                        ImageLoader.getInstance().displayImage(list.get(9).path, shop_10, options);
+                        //ImageLoader.getInstance().displayImage(list.get(9).path, shop_10, options);
+                        shop_10.setImageURI(Uri.parse(list.get(9).path));
                         shop_10.setTag(list.get(9).id);
                         break;
                     case 10:
-                        ImageLoader.getInstance().displayImage(list.get(10).path, shop_11, options);
+                        //ImageLoader.getInstance().displayImage(list.get(10).path, shop_11, options);
+                        shop_11.setImageURI(Uri.parse( list.get(10).path));
                         shop_11.setTag(list.get(10).id);
                         break;
 

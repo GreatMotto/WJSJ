@@ -25,6 +25,7 @@ import com.bm.wjsj.Base.LoginActivity;
 import com.bm.wjsj.Base.RegisterActivity;
 import com.bm.wjsj.Base.SplashActivity;
 import com.bm.wjsj.Bean.AttentionListBean;
+import com.bm.wjsj.Bean.ImageBean;
 import com.bm.wjsj.Circle.CircleFragment;
 import com.bm.wjsj.Constans.Constant;
 import com.bm.wjsj.Date.DateFragment;
@@ -47,14 +48,21 @@ import com.bm.wjsj.Utils.SharedPreferencesHelper;
 import com.bm.wjsj.View.SlidingMenu.SlidingFragmentActivity;
 import com.bm.wjsj.View.SlidingMenu.SlidingMenu;
 import com.bm.wjsj.View.SlidingMenu.SlidingMenu.CanvasTransformer;
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.view.SimpleDraweeView;
+import com.facebook.imagepipeline.common.ResizeOptions;
+import com.facebook.imagepipeline.core.ImagePipeline;
+import com.facebook.imagepipeline.request.ImageRequest;
+import com.facebook.imagepipeline.request.ImageRequestBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import cn.jpush.android.api.JPushInterface;
 import io.rong.imkit.RongIM;
+import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
+import io.rong.imlib.model.Message;
 import io.rong.imlib.model.UserInfo;
 
 
@@ -91,7 +99,8 @@ public class MainActivity extends SlidingFragmentActivity implements APICallback
 
     private JUnReadReceiver receiver = null;
 
-    //public List<ImageBean> imagelist = new ArrayList<>();
+
+    public List<ImageBean> imagelist = new ArrayList<>();
 
     /**
      * 目标 Id
@@ -115,7 +124,7 @@ public class MainActivity extends SlidingFragmentActivity implements APICallback
         Log.e(TAG, "--------onCreate-------");
 
         //获得banner图
-        //WebServiceAPI.getInstance().circleBanner(MainActivity.this, this);
+        WebServiceAPI.getInstance().circleBanner(MainActivity.this, this);
 
         setContentView(R.layout.activity_main);
         Log.e("Registration ID", JPushInterface.getRegistrationID(this));
@@ -371,6 +380,12 @@ public class MainActivity extends SlidingFragmentActivity implements APICallback
             }
         }, false);
         RongIM.getInstance().setMessageAttachedUserInfo(false);
+        RongIM.setOnReceiveMessageListener(new RongIMClient.OnReceiveMessageListener() {
+            @Override
+            public boolean onReceived(Message message, int i) {
+                return false;
+            }
+        });
 
 
         if (WJSJApplication.getInstance().getSp().getBooleanValue(Constant.SP_KEY_ISLOGIN)) {
@@ -484,8 +499,9 @@ public class MainActivity extends SlidingFragmentActivity implements APICallback
             Bundle bundle = intent.getExtras();
 
             //Log.e("unRead:", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-
-            WebServiceAPI.getInstance().findUnReadmessageNum(MainActivity.this, MainActivity.this);
+            if (WJSJApplication.getInstance().getSp().getBooleanValue(Constant.SP_KEY_ISLOGIN)) {
+                WebServiceAPI.getInstance().findUnReadmessageNum(MainActivity.this, MainActivity.this);
+            }
 
             //AppShortCutUtil.addNumShortCut(WJSJApplication.getInstance(), SplashActivity.class, true, "11", false);
 
@@ -643,6 +659,7 @@ public class MainActivity extends SlidingFragmentActivity implements APICallback
 
     @Override
     public void OnFailureData(String error, Integer tag) {
+        Log.e("mainFailure:","**************************************************error:"+error+",tag:"+tag);
     }
 
     @Override
@@ -656,18 +673,37 @@ public class MainActivity extends SlidingFragmentActivity implements APICallback
                     list.clear();
                     list.addAll(apiResponse.data.list);
                     for (int i = 0; i < MainActivity.list.size(); i++) {
-                            path = MainActivity.list.get(i).head;
-                            mTitle = MainActivity.list.get(i).nickname;
+                        path = MainActivity.list.get(i).head;
+                        mTitle = MainActivity.list.get(i).nickname;
 //                        Log.e("|id=", MainActivity.list.get(i).id);
 //                        Log.e("|path=",path);
-                        Log.e("|Test=",Urls.PHOTO + path + "|");
+                        Log.e("|Test=", Urls.PHOTO + path + "|");
                     }
                     break;
                 case 5:
-//                    if (imagelist.size() != 0) {
-//                        imagelist.clear();
-//                    }
-//                    imagelist.addAll(apiResponse.data.list);
+                    if (apiResponse.data.list != null && apiResponse.data.list.size() > 0) {
+                        if (imagelist.size() != 0) {
+                            imagelist.clear();
+                        }
+                        imagelist.addAll(apiResponse.data.list);
+                        ImagePipeline imagePipeline = Fresco.getImagePipeline();
+                      List<ImageBean> newList=   getImageBean(imagelist, imagelist.size());
+                        int width = 50, height = 50;
+                        for(ImageBean bean :newList)
+                        {
+                            Log.e("mainPicPath:", "--------------------------------" + bean.path);
+                            Uri uri=Uri.parse(bean.path);
+                            ImageRequest request = ImageRequestBuilder
+                                    .newBuilderWithSource(uri)
+                                    .setResizeOptions(new ResizeOptions(width, height))
+                                    //.setProgressiveRenderingEnabled(true)
+                                    .build();
+                            //imagePipeline.prefetchToBitmapCache(request,this);
+                            //imagePipeline.prefetchToDiskCache(request,this);
+                        }
+
+                    }
+
 //                    Log.e("imagelist","!!!!!!!" + imagelist.size());
                     break;
                 case 22:
@@ -675,28 +711,28 @@ public class MainActivity extends SlidingFragmentActivity implements APICallback
                     sp1.putValue(Constant.STATUS, apiResponse.data.status);
                     break;
                 case 11:
-                    String attnum= apiResponse.data.attnum;
-                    String actnum =apiResponse.data.actnum;
+                    String attnum = apiResponse.data.attnum;
+                    String actnum = apiResponse.data.actnum;
                     String sysnum = apiResponse.data.sysnum;
-                    int allCount=0,attCount=0,actCount=0,sysCount=0;
-                    try{
-                        if(!TextUtils.isEmpty(attnum))
-                        {
-                             attCount = Integer.parseInt(attnum);
+                    int allCount = 0, attCount = 0, actCount = 0, sysCount = 0;
+                    try {
+                        if (!TextUtils.isEmpty(attnum)) {
+                            attCount = Integer.parseInt(attnum);
                         }
-                        if(!TextUtils.isEmpty(actnum)){
-                            actCount=Integer.parseInt(actnum);
+                        if (!TextUtils.isEmpty(actnum)) {
+                            actCount = Integer.parseInt(actnum);
                         }
-                        if(!TextUtils.isEmpty(sysnum)){
-                            sysCount=Integer.parseInt(sysnum);
+                        if (!TextUtils.isEmpty(sysnum)) {
+                            sysCount = Integer.parseInt(sysnum);
                         }
-                        allCount=attCount+actCount+sysCount;
-                    }catch (Exception ex){}
+                        allCount = attCount + actCount + sysCount;
+                    } catch (Exception ex) {
+                    }
                     sp.putValue(Constant.UNJREADMESSAGE, "" + allCount);
                     setBadgeText();
 
-                    ConversationListDynamicFragment df= getConversationListDynamicFragment();
-                    df.setBadge(attnum,actnum,sysnum);
+                    ConversationListDynamicFragment df = getConversationListDynamicFragment();
+                    df.setBadge(attnum, actnum, sysnum);
                     break;
             }
         }
@@ -704,7 +740,7 @@ public class MainActivity extends SlidingFragmentActivity implements APICallback
 
     @Override
     public void OnErrorData(String code, Integer tag) {
-        Log.e("tag", code);
+        Log.e("mainErrorData:","**************************************************error:"+code+",tag:"+tag);
     }
 
     @Override

@@ -19,11 +19,13 @@ import android.widget.Toast;
 import com.bm.wjsj.Base.BaseActivity;
 import com.bm.wjsj.Bean.Result;
 import com.bm.wjsj.Bean.StoreListBean;
+import com.bm.wjsj.Constans.Constant;
 import com.bm.wjsj.Http.APICallback;
 import com.bm.wjsj.Http.APIResponse;
 import com.bm.wjsj.Http.WebServiceAPI;
 import com.bm.wjsj.R;
 import com.bm.wjsj.View.RefreshLayout;
+import com.bm.wjsj.WJSJApplication;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -235,8 +237,14 @@ public class SecondClassifyActivity extends BaseActivity implements APICallback.
                 }
                 break;
             case R.id.go_shopcat:
-                Intent intent = new Intent(this, MyShopCatActivity.class);
-                startActivity(intent);
+                if (!WJSJApplication.getInstance().getSp().getBooleanValue(Constant.SP_KEY_ISLOGIN)) {
+                    gotoLoginAc(this, 333);
+                } else {
+                    Intent intentCar = new Intent(this, MyShopCatActivity.class);
+                    startActivity(intentCar);
+                }
+//                Intent intent = new Intent(this, MyShopCatActivity.class);
+//                startActivity(intent);
 
                 break;
             case R.id.iv_shaixuan:
